@@ -67,6 +67,21 @@ class MainPresenterImplTest {
         }
     }
 
+    @Test
+    fun onTapBurger_callNavigateToBurgerDetails() {
+        val tappedBurger = BurgerVO()
+        tappedBurger.burgerId = 1
+        tappedBurger.burgerName = "Big Mac"
+        tappedBurger.burgerImageUrl = ""
+        tappedBurger.burgerDescription = "Big Mac Burger"
+        val imageView = ImageView(ApplicationProvider.getApplicationContext())
+
+        mPresenter.onTapBurger(tappedBurger, imageView)
+        verify {
+            mView.navigateToBurgerDetailsScreenWithAnimation(tappedBurger.burgerId, imageView)
+        }
+    }
+
 
 
 
