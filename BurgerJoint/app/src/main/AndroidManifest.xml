@@ -31,6 +31,7 @@
             android:theme="@style/AppTheme">
         </activity>
         <activity android:name=".activities.GameActivity"/>
+        <activity android:name=".activities.LoginActivity"/>
     </application>
 
 </manifest>
